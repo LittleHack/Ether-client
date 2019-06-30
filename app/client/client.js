@@ -43,6 +43,9 @@ async function createWallet (req, res) {
 
 async function getAllWallets (req, res) {
     let result = await walletTools.findAll();
+    result = result.map((wallet) => {
+        return wallet.toObject();
+    });
     return res.status(200).json(result);
 }
 
