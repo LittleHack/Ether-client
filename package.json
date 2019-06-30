@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "staging": "nodemon server.js"
+    "staging": "nodemon server.js",
+    "tests": "mocha test/client.js"
   },
   "keywords": [],
   "author": "Ivan Zhelyazkov",
@@ -14,5 +15,11 @@
     "express": "^4.17.1",
     "keythereum": "^1.0.4",
     "web3": "^1.0.0-beta.55"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-files": "^1.4.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.1.4"
   }
 }

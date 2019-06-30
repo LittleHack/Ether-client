@@ -108,10 +108,7 @@ async function sendTransaction (req, res) {
         return res.status(400).send({Error: err.toString()});
     }
 
-    // Value to be sent
     var txValue = web3.utils.numberToHex(web3.utils.toWei('0.1', 'ether'));
-
-    // Data to be sent in transaction, converted into a hex value.
     var txData = web3.utils.asciiToHex('hello world');
 
     var rawTx = {
@@ -123,11 +120,8 @@ async function sendTransaction (req, res) {
         data: txData // The data to be sent with transaction, '0x6f6820686169206d61726b' or 'hello world' 
     }
 
-    // Create transaction instance
     const tx = new Transaction(rawTx);
-    // Sign transaction with private key
     tx.sign(pKey);
-    // Serialize transaction
     const serializedTx = tx.serialize();
 
     let result;

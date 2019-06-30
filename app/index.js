@@ -12,6 +12,6 @@ app.use(express.json());
 // Link all routes with app
 app.use('/', routes);
 
-app.listen(config.port, () => {
+module.exports = app.listen(config.port, () => {
     console.log('Application is live on port:', config.port);
 });
