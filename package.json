@@ -1,0 +1,18 @@
+{
+  "name": "ethereum-client",
+  "version": "1.0.0",
+  "description": "A client for wallet and transaction management in ethereum blockchain",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "staging": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "Ivan Zhelyazkov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "keythereum": "^1.0.4",
+    "web3": "^1.0.0-beta.55"
+  }
+}
